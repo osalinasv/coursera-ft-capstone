@@ -1,6 +1,7 @@
 {
   "name": "coursera-ft-capstone",
   "version": "0.1.0",
+  "author": "Omar Salinas",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
