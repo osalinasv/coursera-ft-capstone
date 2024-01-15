@@ -1,0 +1,52 @@
+.header {
+  position: sticky;
+  background: var(--background);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  height: 3.125rem;
+}
+
+.navigation {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.navigation ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-item {
+  color: var(--dark);
+  background: transparent;
+  text-decoration: none;
+  transition-property: background;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.navigation-item:is(:hover, :focus-visible) {
+  background: var(--surface);
+}
+
+.navigation-lg {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 0.125rem;
+}
+
+.navigation-lg .navigation-item {
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+}
