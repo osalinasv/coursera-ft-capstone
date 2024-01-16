@@ -22,18 +22,46 @@
   font-weight: 100 900;
 }
 
-.font-sans {
-  font-family: "Karla", sans-serif;
-}
-
-.font-serif {
-  font-family: "Markazi", serif;
+html {
+  line-height: 1.5;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Karla", sans-serif;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
 }
 
 .container {
@@ -45,7 +73,59 @@ body {
   margin-left: auto;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .px-gutter {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.font-sans {
+  font-family: "Karla", sans-serif;
+}
+
+.font-serif {
+  font-family: "Markazi", serif;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-2xl {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.font-3xl {
+  font-size: 4rem;
+  line-height: 1;
 }

@@ -16,11 +16,6 @@
   height: 3.125rem;
 }
 
-.navigation {
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-
 .navigation ul {
   padding: 0;
   margin: 0;
@@ -42,8 +37,6 @@
 .navigation-lg {
   display: flex;
   flex-wrap: nowrap;
-  list-style: none;
-  gap: 0.125rem;
 }
 
 .navigation-lg .navigation-item {

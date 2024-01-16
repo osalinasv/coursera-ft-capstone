@@ -1,5 +1,5 @@
 import "../styles/components/Header.css";
-import logo from "../assets/logo-light.svg";
+import logo from "../assets/logo.svg";
 
 const navigationMenu = [
   { label: "Home", href: "/" },
@@ -24,10 +24,10 @@ function Header() {
         </a>
 
         <nav className="navigation">
-          <ul className="navigation-lg">
+          <ul className="navigation-lg list-none" role="list">
             {navigationMenu.map(({ label, ...rest }) => (
               <li key={label}>
-                <a {...rest} className="navigation-item">
+                <a {...rest} className="navigation-item font-lg font-bold">
                   {label}
                 </a>
               </li>
