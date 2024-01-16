@@ -1,5 +1,6 @@
 import "../styles/components/Footer.css";
 import logo from "../assets/logo-solid-vertical.svg";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -22,19 +23,19 @@ function Footer() {
             <nav className="footer-nav">
               <ul className="list-none" role="list">
                 <li>
-                  <a href="/">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="/#about">About</a>
+                  <Link to="/#about">About</Link>
                 </li>
                 <li>
-                  <a href="/#menu">Menu</a>
+                  <Link to="/#menu">Menu</Link>
                 </li>
                 <li>
-                  <a href="/reserve">Reservations</a>
+                  <Link to="/reserve">Reservations</Link>
                 </li>
                 <li>
-                  <a href="/order">Order Online</a>
+                  <Link to="/order">Order Online</Link>
                 </li>
               </ul>
             </nav>

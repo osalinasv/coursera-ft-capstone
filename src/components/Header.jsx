@@ -1,19 +1,20 @@
 import "../styles/components/Header.css";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const navigationMenu = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
-  { label: "Menu", href: "/#menu" },
-  { label: "Reservations", href: "/reserve" },
-  { label: "Order Online", href: "/order" },
+  { label: "Home", to: "/" },
+  { label: "About", to: "/#about" },
+  { label: "Menu", to: "/#menu" },
+  { label: "Reservations", to: "/reserve" },
+  { label: "Order Online", to: "/order" },
 ];
 
 function Header() {
   return (
     <header className="header">
       <div className="header-container container mx-auto px-gutter">
-        <a href="/">
+        <Link to="/">
           <img
             src={logo}
             alt="Little Lemon"
@@ -21,15 +22,15 @@ function Header() {
             width={200}
             height={56}
           />
-        </a>
+        </Link>
 
         <nav className="navigation">
           <ul className="navigation-lg list-none" role="list">
             {navigationMenu.map(({ label, ...rest }) => (
               <li key={label}>
-                <a {...rest} className="navigation-item font-lg font-bold">
+                <Link {...rest} className="navigation-item font-lg font-bold">
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

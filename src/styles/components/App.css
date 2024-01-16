@@ -1,3 +1,11 @@
 #root {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
   min-height: 100dvh;
+}
+
+.footer {
+  margin-top: auto;
+  justify-self: flex-end;
 }
