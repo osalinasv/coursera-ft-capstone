@@ -1,0 +1,39 @@
+.about {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.about-container {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-images {
+  display: grid;
+}
+
+.about-images > img {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  grid-area: 1 / 1;
+  max-width: 380px;
+  object-fit: cover;
+  width: 60%;
+}
+
+.about-images > img:first-of-type {
+  justify-self: start;
+  margin-top: 3rem;
+}
+
+.about-images > img:last-of-type {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  justify-self: end;
+  margin-bottom: 3rem;
+}

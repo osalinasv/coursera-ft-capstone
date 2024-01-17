@@ -6,7 +6,7 @@ import "./Hero.css";
 export function Hero() {
   return (
     <main className="hero bg-primary text-inverse">
-      <div className="hero-container container mx-auto px-gutter">
+      <div className="hero-container container mx-auto px-gutter font-xl">
         <div>
           <header className="mb-4">
             <h1 className="font-3xl text-accent font-medium font-serif">
@@ -15,7 +15,7 @@ export function Hero() {
             <p className="font-2xl font-serif leading-none">Chicago</p>
           </header>
 
-          <p className="hero-text font-xl font-medium mb-4">
+          <p className="hero-text font-medium mb-4">
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>

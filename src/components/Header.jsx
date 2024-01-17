@@ -10,7 +10,7 @@ const navigationMenu = [
   { label: "Order Online", to: "/order" },
 ];
 
-function Header() {
+export function Header() {
   return (
     <header className="header">
       <div className="header-container container mx-auto px-gutter">
@@ -39,5 +39,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

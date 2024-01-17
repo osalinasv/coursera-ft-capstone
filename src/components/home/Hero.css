@@ -22,11 +22,6 @@
   max-width: 28ch;
 }
 
-.hero-action {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .hero-image {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);

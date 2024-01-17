@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo-solid-vertical.svg";
 import "./Footer.css";
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="footer bg-primary text-inverse">
       <div className="footer-container container mx-auto px-gutter">
@@ -90,5 +90,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;
