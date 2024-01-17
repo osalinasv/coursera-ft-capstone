@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { About } from "../components/home/About";
 import { Hero } from "../components/home/Hero";
+import { Specials } from "../components/home/Specials";
 
 function AnchorScroller({ children }) {
   const { hash } = useLocation();
@@ -22,6 +23,7 @@ function Home() {
   return (
     <AnchorScroller>
       <Hero />
+      <Specials />
       <About />
     </AnchorScroller>
   );

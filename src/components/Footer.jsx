@@ -30,7 +30,7 @@ export function Footer() {
                   <Link to="/#about">About</Link>
                 </li>
                 <li className="mb-2">
-                  <Link to="/#menu">Menu</Link>
+                  <Link to="/menu">Menu</Link>
                 </li>
                 <li className="mb-2">
                   <Link to="/reserve">Reservations</Link>

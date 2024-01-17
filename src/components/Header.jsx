@@ -5,7 +5,7 @@ import "./Header.css";
 const navigationMenu = [
   { label: "Home", to: "/" },
   { label: "About", to: "/#about" },
-  { label: "Menu", to: "/#menu" },
+  { label: "Menu", to: "/menu" },
   { label: "Reservations", to: "/reserve" },
   { label: "Order Online", to: "/order" },
 ];

@@ -9,17 +9,17 @@
   transition-timing-function: ease-in-out;
 }
 
-.button-primary:is(:hover, :focus-visible) {
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button-primary {
   background: var(--surface);
 }
 
 .button-primary:is(:hover, :focus-visible) {
-  background: hsl(from var(--surface) h s calc(l + 0.2));
-}
-
-.button:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+  background: hsl(from var(--surface) h s calc(l + 0.03));
 }
 
 .button-accent {
@@ -28,7 +28,7 @@
 }
 
 .button-accent:is(:hover, :focus-visible) {
-  background: hsl(from var(--accent) h s calc(l + 0.2));
+  background: hsl(from var(--accent) h s calc(l + 0.1));
 }
 
 .button-lg {

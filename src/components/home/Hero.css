@@ -1,6 +1,6 @@
 .hero {
   --pb: 2rem;
-  --mb: 5rem;
+  --mb: 4rem;
   margin-bottom: var(--mb);
   padding-bottom: var(--pb);
   padding-top: 2rem;
@@ -30,6 +30,9 @@
   max-width: 420px;
   object-fit: cover;
   width: 100%;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 @media (min-width: 640px) {
