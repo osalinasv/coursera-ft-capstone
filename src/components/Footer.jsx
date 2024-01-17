@@ -1,10 +1,11 @@
-import "../styles/components/Footer.css";
-import logo from "../assets/logo-solid-vertical.svg";
+import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo-solid-vertical.svg";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer bg-primary text-inverse">
       <div className="footer-container container mx-auto px-gutter">
         <div className="footer-logo-cont">
           <img
@@ -22,19 +23,19 @@ function Footer() {
 
             <nav className="footer-nav">
               <ul className="list-none" role="list">
-                <li>
+                <li className="mb-2">
                   <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li className="mb-2">
                   <Link to="/#about">About</Link>
                 </li>
-                <li>
+                <li className="mb-2">
                   <Link to="/#menu">Menu</Link>
                 </li>
-                <li>
+                <li className="mb-2">
                   <Link to="/reserve">Reservations</Link>
                 </li>
-                <li>
+                <li className="mb-2">
                   <Link to="/order">Order Online</Link>
                 </li>
               </ul>
@@ -57,7 +58,32 @@ function Footer() {
 
           <section>
             <h3 className="font-lg font-bold mb-4">Social Media</h3>
-            <div></div>
+            <div className="footer-socials">
+              <a
+                href="https://facebook.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Facebook"
+              >
+                <SiFacebook aria-hidden="true" />
+              </a>
+              <a
+                href="https://twitter.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Twitter"
+              >
+                <SiTwitter aria-hidden="true" />
+              </a>
+              <a
+                href="https://instagram.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Instagram"
+              >
+                <SiInstagram aria-hidden="true" />
+              </a>
+            </div>
           </section>
         </div>
       </div>

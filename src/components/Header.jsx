@@ -1,6 +1,6 @@
-import "../styles/components/Header.css";
-import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
+import "./Header.css";
 
 const navigationMenu = [
   { label: "Home", to: "/" },

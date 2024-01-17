@@ -1,24 +1,21 @@
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --dark: #333333;
-  --surface: #edefee;
-  --primary: #495e57;
-  --accent: #f4ce14;
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 20%);
+  --surface: hsl(150, 6%, 93%);
+  --primary: hsl(160, 13%, 33%);
+  --accent: hsl(50, 91%, 52%);
   --radius: 1rem;
 }
 
 @font-face {
-  font-family: "Markazi";
-  src: url("../fonts/markazi/MarkaziText-VariableFont_wght.ttf")
-    format("truetype supports variation");
+  font-family: 'Markazi';
+  src: url('./fonts/Markazi.ttf') format('truetype');
   font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "Karla";
-  src: url("../fonts/karla/Karla-VariableFont_wght.ttf")
-    format("truetype supports variation");
+  font-family: 'Karla';
+  src: url('./fonts/Karla.ttf') format('truetype');
   font-weight: 100 900;
 }
 
@@ -29,7 +26,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   line-height: inherit;
 }
 
@@ -48,7 +45,6 @@ a {
   text-decoration: inherit;
 }
 
-blockquote,
 dl,
 dd,
 h1,
@@ -57,11 +53,13 @@ h3,
 h4,
 h5,
 h6,
-hr,
-figure,
-p,
-pre {
+p {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -81,6 +79,14 @@ pre {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .px-gutter {
   padding-right: 1rem;
   padding-left: 1rem;
@@ -91,15 +97,15 @@ pre {
 }
 
 .font-sans {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .font-serif {
-  font-family: "Markazi", serif;
+  font-family: 'Markazi', serif;
 }
 
 .font-medium {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .font-bold {
@@ -128,4 +134,20 @@ pre {
 .font-3xl {
   font-size: 4rem;
   line-height: 1;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-inverse {
+  color: var(--background);
+}
+
+.bg-primary {
+  background: var(--primary);
 }

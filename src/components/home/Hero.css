@@ -1,0 +1,45 @@
+.hero {
+  --pb: 2rem;
+  --mb: 5rem;
+  margin-bottom: var(--mb);
+  padding-bottom: var(--pb);
+  padding-top: 2rem;
+}
+
+.hero-container {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .hero-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: space-between;
+  }
+}
+
+.hero-text {
+  max-width: 28ch;
+}
+
+.hero-action {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-image {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  justify-self: center;
+  margin-bottom: calc((var(--pb) + var(--mb)) * -1);
+  max-width: 420px;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero-image {
+    aspect-ratio: 1 / 1;
+    justify-self: end;
+  }
+}
