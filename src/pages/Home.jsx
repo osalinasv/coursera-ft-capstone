@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { About } from "../components/home/About";
 import { Hero } from "../components/home/Hero";
 import { Specials } from "../components/home/Specials";
+import { Testimonials } from "../components/home/Testimonials";
 
 function AnchorScroller({ children }) {
   const { hash } = useLocation();
@@ -24,6 +25,7 @@ function Home() {
     <AnchorScroller>
       <Hero />
       <Specials />
+      <Testimonials />
       <About />
     </AnchorScroller>
   );

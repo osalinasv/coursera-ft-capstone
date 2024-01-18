@@ -1,0 +1,46 @@
+.testimonials {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.carousel {
+  --size: 250px;
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  scroll-behavior: smooth;
+  gap: var(--gap);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  max-width: calc(var(--size) * 3 + var(--gap) * 4);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5rem;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: hsl(from var(--foreground) h s l / 0.4);
+  border-radius: 4px;
+}
+
+.carousel-item {
+  flex: none;
+  width: var(--size);
+  scroll-margin: 1rem;
+  scroll-snap-align: start;
+}
+
+.carousel-item-img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
