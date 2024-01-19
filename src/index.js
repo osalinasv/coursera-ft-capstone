@@ -6,6 +6,7 @@ import "./index.css";
 import "./normalize.css";
 
 const Home = React.lazy(() => import("./pages/Home"));
+const Menu = React.lazy(() => import("./pages/Menu"));
 const Order = React.lazy(() => import("./pages/Order"));
 const Reserve = React.lazy(() => import("./pages/Reserve"));
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/reserve",
         element: <Reserve />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
       },
     ],
   },
