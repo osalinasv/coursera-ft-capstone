@@ -30,9 +30,7 @@
 }
 
 .about-images > img:last-of-type {
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   justify-self: end;
   margin-bottom: 3rem;
 }

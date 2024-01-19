@@ -1,9 +1,9 @@
+import { About } from '#components/home/About'
+import { HomeHero } from '#components/home/HomeHero'
+import { Specials } from '#components/home/Specials'
+import { Testimonials } from '#components/home/Testimonials'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { About } from '../components/home/About'
-import { HomeHero } from '../components/home/HomeHero'
-import { Specials } from '../components/home/Specials'
-import { Testimonials } from '../components/home/Testimonials'
 
 function AnchorScroller({ children }) {
   const { hash } = useLocation()

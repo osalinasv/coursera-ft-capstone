@@ -1,42 +1,42 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
-import "./index.css";
-import "./normalize.css";
+import '#index.css'
+import '#normalize.css'
+import Root from '#pages/Root'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const Home = React.lazy(() => import("./pages/Home"));
-const Menu = React.lazy(() => import("./pages/Menu"));
-const Order = React.lazy(() => import("./pages/Order"));
-const Reserve = React.lazy(() => import("./pages/Reserve"));
+const Home = React.lazy(() => import('#pages/Home'))
+const Menu = React.lazy(() => import('#pages/Menu'))
+const Order = React.lazy(() => import('#pages/Order'))
+const Reserve = React.lazy(() => import('#pages/Reserve'))
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    path: '/',
+    element: <Root />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/order/:slug?",
+        path: '/order/:slug?',
         element: <Order />,
       },
       {
-        path: "/reserve",
+        path: '/reserve',
         element: <Reserve />,
       },
       {
-        path: "/menu",
+        path: '/menu',
         element: <Menu />,
       },
     ],
   },
-]);
+])
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-);
+  </React.StrictMode>
+)

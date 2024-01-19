@@ -1,7 +1,7 @@
-import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo-solid-vertical.svg";
-import "./Footer.css";
+import logo from '#assets/logo-solid-vertical.svg'
+import { SiFacebook, SiInstagram, SiTwitter } from 'react-icons/si'
+import { Link } from 'react-router-dom'
+import './styles.css'
 
 export function Footer() {
   return (
@@ -88,5 +88,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

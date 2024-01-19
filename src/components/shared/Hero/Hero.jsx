@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import './Hero.css'
+import './styles.css'
 
 function HeroContent({ className, ...props }) {
   return <div className={clsx('hero-content', className)} {...props} />

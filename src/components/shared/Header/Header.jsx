@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
-import "./Header.css";
+import logo from '#assets/logo.svg'
+import { Link } from 'react-router-dom'
+import './styles.css'
 
 const navigationMenu = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/#about" },
-  { label: "Menu", to: "/menu" },
-  { label: "Reservations", to: "/reserve" },
-  { label: "Order Online", to: "/order" },
-];
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/#about' },
+  { label: 'Menu', to: '/menu' },
+  { label: 'Reservations', to: '/reserve' },
+  { label: 'Order Online', to: '/order' },
+]
 
 export function Header() {
   return (
@@ -37,5 +37,5 @@ export function Header() {
         </nav>
       </div>
     </header>
-  );
+  )
 }

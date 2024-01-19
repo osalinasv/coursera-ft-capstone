@@ -1,6 +1,6 @@
-import ownersImage from "../../assets/about-image-1.webp";
-import restaurantImage from "../../assets/about-image-2.webp";
-import "./About.css";
+import ownersImage from '#assets/about-image-1.webp'
+import restaurantImage from '#assets/about-image-2.webp'
+import './styles.css'
 
 export function About() {
   return (
@@ -46,5 +46,5 @@ export function About() {
         />
       </div>
     </section>
-  );
+  )
 }
