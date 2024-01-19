@@ -22,19 +22,3 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
-
-.specials-card-header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.specials-card-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-}
