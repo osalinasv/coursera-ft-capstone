@@ -9,6 +9,8 @@ const Home = React.lazy(() => import("#pages/Home"));
 const Menu = React.lazy(() => import("#pages/Menu"));
 const Order = React.lazy(() => import("#pages/Order"));
 const Reserve = React.lazy(() => import("#pages/Reserve"));
+const ReserveForm = React.lazy(() => import("#pages/Reserve/Form"));
+const ReserveSuccess = React.lazy(() => import("#pages/Reserve/Success"));
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,16 @@ const router = createBrowserRouter([
       {
         path: "/reserve",
         element: <Reserve />,
+        children: [
+          {
+            path: "",
+            element: <ReserveForm />,
+          },
+          {
+            path: "success",
+            element: <ReserveSuccess />,
+          },
+        ],
       },
       {
         path: "/menu",
