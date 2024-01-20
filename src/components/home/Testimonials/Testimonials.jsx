@@ -1,25 +1,25 @@
-import femaleUser1 from '#assets/user-female-1.jpg'
-import femaleUser2 from '#assets/user-female-2.jpg'
-import maleUser1 from '#assets/user-male-1.jpg'
-import maleUser2 from '#assets/user-male-2.jpg'
-import { Card, CardContent, CardHeader } from '#components/ui/Card'
-import React, { useEffect, useRef } from 'react'
-import './styles.css'
+import femaleUser1 from "#assets/user-female-1.jpg";
+import femaleUser2 from "#assets/user-female-2.jpg";
+import maleUser1 from "#assets/user-male-1.jpg";
+import maleUser2 from "#assets/user-male-2.jpg";
+import { Card, CardContent, CardHeader } from "#components/ui/Card";
+import React, { useEffect, useRef } from "react";
+import "./styles.css";
 
 function Testimonial({ name, score, review, image, ...props }) {
-  const paddedStars = 5 - score
+  const paddedStars = 5 - score;
   return (
     <Card className="carousel-item text-center text-foreground" {...props}>
       <CardHeader>
         <span title={`${score} stars out of 5`} className="font-xl">
           {score > 0 && (
             <span className="text-accent" aria-hidden={true}>
-              {'★'.repeat(score)}
+              {"★".repeat(score)}
             </span>
           )}
           {paddedStars > 0 && (
             <span className="text-surface" aria-hidden={true}>
-              {'★'.repeat(5 - score)}
+              {"★".repeat(5 - score)}
             </span>
           )}
         </span>
@@ -37,53 +37,53 @@ function Testimonial({ name, score, review, image, ...props }) {
         <q className="text-primary">{review}</q>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 function DraggableContainer(props) {
-  const ref = useRef()
+  const ref = useRef();
 
   useEffect(() => {
-    if (!ref.current) return
-    const element = ref.current
+    if (!ref.current) return;
+    const element = ref.current;
 
-    let isDown = false
-    let startX = 0
-    let scrollLeft = 0
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
     const onMouseDown = (event) => {
-      isDown = true
-      startX = event.pageX - element.offsetLeft
-      scrollLeft = element.scrollLeft
-    }
+      isDown = true;
+      startX = event.pageX - element.offsetLeft;
+      scrollLeft = element.scrollLeft;
+    };
 
     const onMouseMove = (event) => {
-      if (!isDown) return
+      if (!isDown) return;
 
-      event.preventDefault()
-      const endX = event.pageX - element.offsetLeft
-      const deltaX = (endX - startX) * 5
-      element.scrollLeft = scrollLeft - deltaX
-    }
+      event.preventDefault();
+      const endX = event.pageX - element.offsetLeft;
+      const deltaX = (endX - startX) * 5;
+      element.scrollLeft = scrollLeft - deltaX;
+    };
 
     const onMouseLift = () => {
-      isDown = false
-    }
+      isDown = false;
+    };
 
-    element.addEventListener('mousedown', onMouseDown)
-    element.addEventListener('mouseup', onMouseLift)
-    element.addEventListener('mouseleave', onMouseLift)
-    element.addEventListener('mousemove', onMouseMove)
+    element.addEventListener("mousedown", onMouseDown);
+    element.addEventListener("mouseup", onMouseLift);
+    element.addEventListener("mouseleave", onMouseLift);
+    element.addEventListener("mousemove", onMouseMove);
 
     return () => {
-      element.removeEventListener('mousedown', onMouseDown)
-      element.removeEventListener('mouseup', onMouseLift)
-      element.removeEventListener('mouseleave', onMouseLift)
-      element.removeEventListener('mousemove', onMouseMove)
-    }
-  })
+      element.removeEventListener("mousedown", onMouseDown);
+      element.removeEventListener("mouseup", onMouseLift);
+      element.removeEventListener("mouseleave", onMouseLift);
+      element.removeEventListener("mousemove", onMouseMove);
+    };
+  });
 
-  return <div {...props} ref={ref} />
+  return <div {...props} ref={ref} />;
 }
 
 function TestimonialCarousel() {
@@ -114,7 +114,7 @@ function TestimonialCarousel() {
         image={maleUser2}
       />
     </DraggableContainer>
-  )
+  );
 }
 export function Testimonials() {
   return (
@@ -130,5 +130,5 @@ export function Testimonials() {
         <TestimonialCarousel />
       </div>
     </section>
-  )
+  );
 }

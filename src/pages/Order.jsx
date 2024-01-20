@@ -1,8 +1,8 @@
-import { Hero } from '#components/shared/Hero'
-import { useParams } from 'react-router'
+import { Hero } from "#components/shared/Hero";
+import { useParams } from "react-router";
 
 function Order() {
-  const { slug } = useParams()
+  const { slug } = useParams();
 
   return (
     <>
@@ -17,7 +17,7 @@ function Order() {
 
       <div className="max-w-prose mx-auto px-gutter text-center py-16">
         <p className="font-bold font-2xl mb-8">
-          Thank you for your interest{' '}
+          Thank you for your interest{" "}
           {slug != null && (
             <span>
               <br />
@@ -31,7 +31,7 @@ function Order() {
         </p>
       </div>
     </>
-  )
+  );
 }
 
-export default Order
+export default Order;

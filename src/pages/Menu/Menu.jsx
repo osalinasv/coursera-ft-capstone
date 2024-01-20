@@ -1,10 +1,10 @@
-import bruschettaImg from '#assets/brushetta.webp'
-import greekSaladImg from '#assets/greek-salad.webp'
-import lemonDessertImg from '#assets/lemon-dessert.webp'
-import heroImage from '#assets/menu-hero.webp'
-import { Hero } from '#components/shared/Hero'
-import { MenuItem } from '#components/shared/MenuItem'
-import './styles.css'
+import bruschettaImg from "#assets/brushetta.webp";
+import greekSaladImg from "#assets/greek-salad.webp";
+import lemonDessertImg from "#assets/lemon-dessert.webp";
+import heroImage from "#assets/menu-hero.webp";
+import { Hero } from "#components/shared/Hero";
+import { MenuItem } from "#components/shared/MenuItem";
+import "./styles.css";
 
 export function MenuHero() {
   return (
@@ -31,7 +31,7 @@ export function MenuHero() {
         </p>
       </Hero.HeroContent>
     </Hero>
-  )
+  );
 }
 
 export function MenuSection() {
@@ -43,7 +43,7 @@ export function MenuSection() {
         <MenuItem
           title="Greek salad"
           price={12.99}
-          image={{ src: greekSaladImg, alt: 'A refreshing greek salad' }}
+          image={{ src: greekSaladImg, alt: "A refreshing greek salad" }}
         >
           <p>
             The famous greek salad of crispy, peppers, olives and our Chicago
@@ -54,7 +54,7 @@ export function MenuSection() {
         <MenuItem
           title="Bruschetta"
           price={5.99}
-          image={{ src: bruschettaImg, alt: 'A fresh bruschetta' }}
+          image={{ src: bruschettaImg, alt: "A fresh bruschetta" }}
         >
           <p>
             Our Bruschetta is made from grilled bread that has been smeared with
@@ -64,7 +64,7 @@ export function MenuSection() {
         <MenuItem
           title="Lemon Dessert"
           price={12.99}
-          image={{ src: lemonDessertImg, alt: 'A delicious lemon dessert' }}
+          image={{ src: lemonDessertImg, alt: "A delicious lemon dessert" }}
         >
           <p>
             This comes straight from grandma's recipe book, every last
@@ -73,7 +73,7 @@ export function MenuSection() {
         </MenuItem>
       </div>
     </section>
-  )
+  );
 }
 
 function Menu() {
@@ -82,7 +82,7 @@ function Menu() {
       <MenuHero />
       <MenuSection />
     </>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

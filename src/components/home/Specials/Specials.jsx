@@ -1,11 +1,11 @@
-import bruschettaImg from '#assets/brushetta.webp'
-import greekSaladImg from '#assets/greek-salad.webp'
-import lemonDessertImg from '#assets/lemon-dessert.webp'
-import { MenuItem } from '#components/shared/MenuItem'
-import { Button } from '#components/ui/Button'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './styles.css'
+import bruschettaImg from "#assets/brushetta.webp";
+import greekSaladImg from "#assets/greek-salad.webp";
+import lemonDessertImg from "#assets/lemon-dessert.webp";
+import { MenuItem } from "#components/shared/MenuItem";
+import { Button } from "#components/ui/Button";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 export function Specials() {
   return (
@@ -24,7 +24,7 @@ export function Specials() {
         <MenuItem
           title="Greek salad"
           price={12.99}
-          image={{ src: greekSaladImg, alt: 'A refreshing greek salad' }}
+          image={{ src: greekSaladImg, alt: "A refreshing greek salad" }}
         >
           <p>
             The famous greek salad of crispy, peppers, olives and our Chicago
@@ -35,7 +35,7 @@ export function Specials() {
         <MenuItem
           title="Bruschetta"
           price={5.99}
-          image={{ src: bruschettaImg, alt: 'A fresh bruschetta' }}
+          image={{ src: bruschettaImg, alt: "A fresh bruschetta" }}
         >
           <p>
             Our Bruschetta is made from grilled bread that has been smeared with
@@ -45,7 +45,7 @@ export function Specials() {
         <MenuItem
           title="Lemon Dessert"
           price={12.99}
-          image={{ src: lemonDessertImg, alt: 'A delicious lemon dessert' }}
+          image={{ src: lemonDessertImg, alt: "A delicious lemon dessert" }}
         >
           <p>
             This comes straight from grandma's recipe book, every last
@@ -54,5 +54,5 @@ export function Specials() {
         </MenuItem>
       </div>
     </section>
-  )
+  );
 }

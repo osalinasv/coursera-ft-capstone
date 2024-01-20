@@ -1,7 +1,7 @@
-import heroImage from '#assets/hero-image.webp'
-import { Hero } from '#components/shared/Hero'
-import { Button } from '#components/ui/Button'
-import { Link } from 'react-router-dom'
+import heroImage from "#assets/hero-image.webp";
+import { Hero } from "#components/shared/Hero";
+import { Button } from "#components/ui/Button";
+import { Link } from "react-router-dom";
 
 export function HomeHero() {
   return (
@@ -31,5 +31,5 @@ export function HomeHero() {
         alt="A waitress holding a platter of bruschetta"
       />
     </Hero>
-  )
+  );
 }

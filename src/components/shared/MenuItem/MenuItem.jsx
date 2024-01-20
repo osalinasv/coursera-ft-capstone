@@ -1,12 +1,12 @@
-import { Button } from '#components/ui/Button'
-import { Card, CardContent, CardFooter, CardHeader } from '#components/ui/Card'
-import { Link } from 'react-router-dom'
-import './styles.css'
+import { Button } from "#components/ui/Button";
+import { Card, CardContent, CardFooter, CardHeader } from "#components/ui/Card";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
-const dollarFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-})
+const dollarFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 export function MenuItem({ title, price, image, children }) {
   return (
@@ -27,5 +27,5 @@ export function MenuItem({ title, price, image, children }) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
