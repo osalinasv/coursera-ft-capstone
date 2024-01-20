@@ -5,7 +5,7 @@ import './styles.css'
 
 export function Footer() {
   return (
-    <footer className="footer bg-primary text-inverse">
+    <footer className="footer bg-primary text-inverse py-16">
       <div className="footer-container container mx-auto px-gutter">
         <div className="footer-logo-cont">
           <img

@@ -1,9 +1,12 @@
 .hero {
   --pb: 2rem;
   --mb: 4rem;
-  margin-bottom: var(--mb);
   padding-bottom: var(--pb);
   padding-top: 2rem;
+}
+
+.hero:has(.hero-image) {
+  margin-bottom: var(--mb);
 }
 
 .hero-container {
@@ -13,7 +16,8 @@
 
 @media (min-width: 640px) {
   .hero-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     justify-content: space-between;
   }
 }
@@ -26,18 +30,20 @@
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   justify-self: center;
-  margin-bottom: calc((var(--pb) + var(--mb)) * -1);
   max-width: 420px;
   object-fit: cover;
   width: 100%;
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.hero-image:not(:first-child) {
+  margin-bottom: calc((var(--pb) + var(--mb)) * -1);
 }
 
 @media (min-width: 640px) {
   .hero-image {
     aspect-ratio: 1 / 1;
     justify-self: end;
+    margin-bottom: calc((var(--pb) + var(--mb)) * -1);
   }
 }

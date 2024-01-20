@@ -4,7 +4,10 @@ import './styles.css'
 
 export function About() {
   return (
-    <section id="about" className="about container mx-auto px-gutter font-xl">
+    <section
+      id="about"
+      className="about container mx-auto px-gutter font-xl py-16"
+    >
       <div>
         <header className="mb-4">
           <h2 className="font-3xl text-accent font-medium font-serif">
@@ -36,12 +39,14 @@ export function About() {
           src={restaurantImage}
           width={420}
           height={635}
+          loading="lazy"
           alt="A waitress holding a tray with seafood"
         />
         <img
           src={ownersImage}
           width={420}
           height={635}
+          loading="lazy"
           alt="A waitress holding a tray with seafood"
         />
       </div>

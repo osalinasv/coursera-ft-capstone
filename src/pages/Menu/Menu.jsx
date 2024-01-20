@@ -1,26 +1,45 @@
 import bruschettaImg from '#assets/brushetta.webp'
 import greekSaladImg from '#assets/greek-salad.webp'
 import lemonDessertImg from '#assets/lemon-dessert.webp'
+import heroImage from '#assets/menu-hero.webp'
+import { Hero } from '#components/shared/Hero'
 import { MenuItem } from '#components/shared/MenuItem'
-import { Button } from '#components/ui/Button'
-import React from 'react'
-import { Link } from 'react-router-dom'
 import './styles.css'
 
-export function Specials() {
+export function MenuHero() {
   return (
-    <section className="specials container mx-auto px-gutter py-16">
-      <header className="mb-8">
-        <h2 className="font-3xl font-medium font-serif">
-          This weeks specials!
-        </h2>
+    <Hero>
+      <Hero.HeroImage
+        src={heroImage}
+        width={720}
+        height={480}
+        alt="A waitress holding a platter of bruschetta"
+        className="menu-hero-img"
+      />
 
-        <Button variant="accent" size="lg" asChild>
-          <Link to="/menu">Online Menu</Link>
-        </Button>
-      </header>
+      <Hero.HeroContent>
+        <header className="mb-4">
+          <h1 className="font-3xl text-accent font-medium font-serif">
+            Our menu
+          </h1>
+          <p className="font-2xl font-serif leading-none">An experience</p>
+        </header>
 
-      <div className="specials-showcase">
+        <p className="hero-text font-medium mb-4">
+          Be delighted with our carefully selected menu of authentic
+          mediterranean dishes. Each one a modern twist in a classic recipe.
+        </p>
+      </Hero.HeroContent>
+    </Hero>
+  )
+}
+
+export function MenuSection() {
+  return (
+    <section className="menu-section container mx-auto px-gutter py-16">
+      <h2 className="font-xl font-extrabold text-uppercase mb-4">Specials</h2>
+
+      <div className="menu-showcase">
         <MenuItem
           title="Greek salad"
           price={12.99}
@@ -56,3 +75,14 @@ export function Specials() {
     </section>
   )
 }
+
+function Menu() {
+  return (
+    <>
+      <MenuHero />
+      <MenuSection />
+    </>
+  )
+}
+
+export default Menu

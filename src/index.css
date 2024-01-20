@@ -8,14 +8,14 @@
 }
 
 @font-face {
-  font-family: "Markazi";
-  src: url("./fonts/Markazi.ttf") format("truetype");
+  font-family: 'Markazi';
+  src: url('./fonts/Markazi.ttf') format('truetype');
   font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "Karla";
-  src: url("./fonts/Karla.ttf") format("truetype");
+  font-family: 'Karla';
+  src: url('./fonts/Karla.ttf') format('truetype');
   font-weight: 100 900;
 }
 
@@ -26,7 +26,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   line-height: inherit;
 }
 
@@ -92,16 +92,21 @@ img {
   padding-left: 1rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .list-none {
   list-style-type: none;
 }
 
 .font-sans {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 .font-serif {
-  font-family: "Markazi", serif;
+  font-family: 'Markazi', serif;
 }
 
 .font-medium {
@@ -160,6 +165,14 @@ img {
   text-align: center;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .bg-primary {
   background: var(--primary);
+}
+
+.max-w-prose {
+  max-width: 65ch;
 }

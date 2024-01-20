@@ -1,7 +1,7 @@
 import { Footer } from '#components/shared/Footer'
 import { Header } from '#components/shared/Header'
 import { Suspense } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import './styles.css'
 
 function Root() {
@@ -12,6 +12,8 @@ function Root() {
         <Outlet />
       </Suspense>
       <Footer />
+
+      <ScrollRestoration />
     </>
   )
 }

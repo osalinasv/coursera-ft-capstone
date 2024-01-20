@@ -30,6 +30,7 @@ function Testimonial({ name, score, review, image, ...props }) {
           width={100}
           height={100}
           alt=""
+          loading="lazy"
           className="carousel-item-img mb-4"
         />
         <p className="font-bold font-xl mb-2">{name}</p>
@@ -117,7 +118,7 @@ function TestimonialCarousel() {
 }
 export function Testimonials() {
   return (
-    <section className="testimonials bg-primary text-inverse">
+    <section className="testimonials bg-primary text-inverse py-16">
       <div className="testimonials-container container mx-auto px-gutter">
         <header className="text-center mb-8">
           <h2 className="font-serif font-medium font-3xl text-accent">

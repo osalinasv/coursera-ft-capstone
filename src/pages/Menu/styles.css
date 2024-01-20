@@ -1,0 +1,17 @@
+@media (min-width: 640px) {
+  .hero-image.menu-hero-img {
+    aspect-ratio: 1 / 1;
+    justify-self: start;
+  }
+}
+
+.menu-showcase {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .menu-showcase {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
