@@ -1,5 +1,5 @@
 import { About } from "#components/home/About";
-import { HomeHero } from "#components/home/HomeHero";
+import { HomeHero } from "#components/home/Hero";
 import { Specials } from "#components/home/Specials";
 import { Testimonials } from "#components/home/Testimonials";
 
