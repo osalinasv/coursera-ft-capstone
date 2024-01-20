@@ -9,13 +9,13 @@
 
 @font-face {
   font-family: "Markazi";
-  src: url("./fonts/Markazi.ttf") format("truetype");
+  src: url("./assets/fonts/Markazi.ttf") format("truetype");
   font-weight: 100 900;
 }
 
 @font-face {
   font-family: "Karla";
-  src: url("./fonts/Karla.ttf") format("truetype");
+  src: url("./assets/fonts/Karla.ttf") format("truetype");
   font-weight: 100 900;
 }
 
