@@ -27,7 +27,7 @@ export function MenuHero() {
 
         <p className="hero-text font-medium mb-4">
           Be delighted with our carefully selected menu of authentic
-          mediterranean dishes. Each one a modern twist in a classic recipe.
+          Mediterranean dishes. Each one a modern twist in a classic recipe.
         </p>
       </Hero.HeroContent>
     </Hero>
