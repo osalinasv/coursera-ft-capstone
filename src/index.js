@@ -1,16 +1,16 @@
-import "#index.css";
-import "#normalize.css";
-import Root from "#pages/Root";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import "./normalize.css";
+import Root from "./pages/Root";
 
-const Home = React.lazy(() => import("#pages/Home"));
-const Menu = React.lazy(() => import("#pages/Menu"));
-const Order = React.lazy(() => import("#pages/Order"));
-const Reserve = React.lazy(() => import("#pages/Reserve"));
-const ReserveForm = React.lazy(() => import("#pages/Reserve/Form"));
-const ReserveSuccess = React.lazy(() => import("#pages/Reserve/Success"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Menu = React.lazy(() => import("./pages/Menu"));
+const Order = React.lazy(() => import("./pages/Order"));
+const Reserve = React.lazy(() => import("./pages/Reserve"));
+const ReserveForm = React.lazy(() => import("./pages/Reserve/Form"));
+const ReserveSuccess = React.lazy(() => import("./pages/Reserve/Success"));
 
 const router = createBrowserRouter([
   {

@@ -1,7 +1,7 @@
-import heroImage from "#assets/about-image-2.webp";
-import { Hero } from "#components/shared/Hero";
-import { Button } from "#components/ui/Button";
 import { Outlet } from "react-router-dom";
+import heroImage from "../../assets/about-image-2.webp";
+import { Hero } from "../../components/shared/Hero";
+import { Button } from "../../components/ui/Button";
 
 function ReserveHero() {
   return (

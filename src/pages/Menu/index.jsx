@@ -1,9 +1,9 @@
-import bruschettaImg from "#assets/brushetta.webp";
-import greekSaladImg from "#assets/greek-salad.webp";
-import lemonDessertImg from "#assets/lemon-dessert.webp";
-import heroImage from "#assets/menu-hero.webp";
-import { Hero } from "#components/shared/Hero";
-import { MenuItem } from "#components/shared/MenuItem";
+import bruschettaImg from "../../assets/brushetta.webp";
+import greekSaladImg from "../../assets/greek-salad.webp";
+import lemonDessertImg from "../../assets/lemon-dessert.webp";
+import heroImage from "../../assets/menu-hero.webp";
+import { Hero } from "../../components/shared/Hero";
+import { MenuItem } from "../../components/shared/MenuItem";
 import "./styles.css";
 
 export function MenuHero() {

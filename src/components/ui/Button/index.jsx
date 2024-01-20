@@ -1,7 +1,7 @@
-import { Slot } from "#components/ui/Slot";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import React from "react";
+import { Slot } from "../Slot";
 import "./styles.css";
 
 const buttonVariants = cva("button font-medium", {

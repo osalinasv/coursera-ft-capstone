@@ -1,9 +1,9 @@
-import femaleUser1 from "#assets/user-female-1.jpg";
-import femaleUser2 from "#assets/user-female-2.jpg";
-import maleUser1 from "#assets/user-male-1.jpg";
-import maleUser2 from "#assets/user-male-2.jpg";
-import { Card, CardContent, CardHeader } from "#components/ui/Card";
 import React, { useEffect, useRef } from "react";
+import femaleUser1 from "../../../assets/user-female-1.jpg";
+import femaleUser2 from "../../../assets/user-female-2.jpg";
+import maleUser1 from "../../../assets/user-male-1.jpg";
+import maleUser2 from "../../../assets/user-male-2.jpg";
+import { Card, CardContent, CardHeader } from "../../ui/Card";
 import "./styles.css";
 
 function Testimonial({ name, score, review, image, ...props }) {

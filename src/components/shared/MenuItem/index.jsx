@@ -1,6 +1,6 @@
-import { Button } from "#components/ui/Button";
-import { Card, CardContent, CardFooter, CardHeader } from "#components/ui/Card";
 import { Link } from "react-router-dom";
+import { Button } from "../../ui/Button";
+import { Card, CardContent, CardFooter, CardHeader } from "../../ui/Card";
 import "./styles.css";
 
 const dollarFormatter = new Intl.NumberFormat("en-US", {

@@ -1,5 +1,5 @@
-import { Hero } from "#components/shared/Hero";
 import { useParams } from "react-router";
+import { Hero } from "../components/shared/Hero";
 
 function Order() {
   const { slug } = useParams();

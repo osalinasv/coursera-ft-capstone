@@ -1,6 +1,6 @@
-import logo from "#assets/logo-solid-vertical.svg";
 import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import { Link } from "react-router-dom";
+import logo from "../../../assets/logo-solid-vertical.svg";
 import "./styles.css";
 
 export function Footer() {

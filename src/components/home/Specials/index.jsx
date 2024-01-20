@@ -1,10 +1,10 @@
-import bruschettaImg from "#assets/brushetta.webp";
-import greekSaladImg from "#assets/greek-salad.webp";
-import lemonDessertImg from "#assets/lemon-dessert.webp";
-import { MenuItem } from "#components/shared/MenuItem";
-import { Button } from "#components/ui/Button";
 import React from "react";
 import { Link } from "react-router-dom";
+import bruschettaImg from "../../../assets/brushetta.webp";
+import greekSaladImg from "../../../assets/greek-salad.webp";
+import lemonDessertImg from "../../../assets/lemon-dessert.webp";
+import { MenuItem } from "../../shared/MenuItem";
+import { Button } from "../../ui/Button";
 import "./styles.css";
 
 export function Specials() {
