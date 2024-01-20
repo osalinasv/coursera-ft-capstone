@@ -40,14 +40,14 @@ export function About() {
           width={420}
           height={635}
           loading="lazy"
-          alt="A waitress holding a tray with seafood"
+          alt="The inside of the Little Lemon restaurant"
         />
         <img
           src={ownersImage}
           width={420}
           height={635}
           loading="lazy"
-          alt="A waitress holding a tray with seafood"
+          alt="Adrian and Mario"
         />
       </div>
     </section>
