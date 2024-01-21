@@ -1,5 +1,6 @@
 import { format } from "date-fns";
-import { Navigate, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
+import { Button } from "../../../components/ui/Button";
 import "./styles.css";
 
 function Success() {
@@ -23,12 +24,18 @@ function Success() {
         {name}
       </p>
 
-      <p>
+      <p className="mb-8">
         We'll have your table ready for <br />
         <span className="font-bold">
           {formattedDate} at {time}
         </span>
       </p>
+
+      <Button size="lg" asChild>
+        <Link to="/booking" preventScrollReset={true}>
+          Go back
+        </Link>
+      </Button>
     </div>
   );
 }

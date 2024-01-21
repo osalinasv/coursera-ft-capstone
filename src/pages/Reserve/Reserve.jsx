@@ -24,7 +24,7 @@ function Reserve() {
             Mediterranean cuisine.
           </p>
 
-          <Button variant="accent" size="lg" className="hero-action" asChild>
+          <Button variant="accent" size="lg" asChild>
             <Link to="/booking#reserve-now">Reserve now</Link>
           </Button>
         </Hero.HeroContent>

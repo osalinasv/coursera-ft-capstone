@@ -19,7 +19,7 @@ export function HomeHero() {
           recipes served with a modern twist.
         </p>
 
-        <Button variant="accent" size="lg" className="hero-action" asChild>
+        <Button variant="accent" size="lg" asChild>
           <Link to="/booking">Reserve a Table</Link>
         </Button>
       </Hero.HeroContent>
