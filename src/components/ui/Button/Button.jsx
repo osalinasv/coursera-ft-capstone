@@ -12,6 +12,7 @@ const buttonVariants = cva("button font-medium", {
     },
     size: {
       lg: "button-lg font-lg",
+      icon: "button-icon",
     },
   },
   defaultVariants: {

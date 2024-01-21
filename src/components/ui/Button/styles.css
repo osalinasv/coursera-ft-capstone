@@ -35,3 +35,8 @@
 .button-lg {
   padding: 1rem 1.5rem;
 }
+
+.button-icon {
+  padding: 1rem;
+  border-radius: 50%;
+}

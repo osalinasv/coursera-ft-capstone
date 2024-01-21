@@ -1,5 +1,8 @@
+import { useState } from "react";
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
+import { Button } from "../../ui/Button";
 import "./styles.css";
 
 const navigationMenu = [
@@ -9,6 +12,60 @@ const navigationMenu = [
   { label: "Reservations", to: "/booking" },
   { label: "Order Online", to: "/order" },
 ];
+
+function NavigationLarge() {
+  return (
+    <nav className="navigation navigation-lg navigation-inline">
+      <ul className="list-none" role="list">
+        {navigationMenu.map(({ label, ...rest }) => (
+          <li key={label}>
+            <Link {...rest} className="navigation-item font-lg font-bold">
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+function NavigationSmall() {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="navigation navigation-sm">
+      <Button
+        size="icon"
+        aria-haspopup="menu"
+        aria-expanded={expanded}
+        onClick={() => setExpanded(!expanded)}
+      >
+        <FaBars />
+      </Button>
+
+      <nav
+        role="menu"
+        className="navigation-dropdown"
+        data-expanded={expanded}
+        inert={!expanded ? "" : null}
+      >
+        <ul className="list-none" role="list">
+          {navigationMenu.map(({ label, ...rest }) => (
+            <li key={label}>
+              <Link
+                {...rest}
+                className="navigation-item font-lg font-bold"
+                onClick={() => setExpanded(false)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+}
 
 export function Header() {
   return (
@@ -24,17 +81,8 @@ export function Header() {
           />
         </Link>
 
-        <nav className="navigation">
-          <ul className="navigation-lg list-none" role="list">
-            {navigationMenu.map(({ label, ...rest }) => (
-              <li key={label}>
-                <Link {...rest} className="navigation-item font-lg font-bold">
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <NavigationLarge />
+        <NavigationSmall />
       </div>
     </header>
   );
