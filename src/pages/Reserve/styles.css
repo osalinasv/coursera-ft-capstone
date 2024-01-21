@@ -1,4 +1,9 @@
 .reserve {
+  display: block;
+  width: 100%;
+}
+
+.reserve-container {
   display: grid;
   border: 1px solid var(--surface);
   border-radius: var(--radius);

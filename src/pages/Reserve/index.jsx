@@ -35,8 +35,11 @@ function Reserve() {
         />
       </Hero>
 
-      <section id="reserve-now" className="container mx-auto px-gutter py-16">
-        <div className="reserve">
+      <section
+        id="reserve-now"
+        className="reserve container mx-auto px-gutter py-16"
+      >
+        <div className="reserve-container">
           <img
             src={accentImage}
             width={853}

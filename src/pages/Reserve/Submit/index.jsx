@@ -1,43 +1,18 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import clsx from "clsx";
 import { compareAsc, format, parse } from "date-fns";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "../../../components/ui/Button";
+import {
+  Field,
+  FieldError,
+  Input,
+  Label,
+  Select,
+} from "../../../components/ui/Form";
 import { fetchAPI } from "../../../integrations/mockApi";
 import "./styles.css";
-
-function Label({ className, children, required, ...props }) {
-  return (
-    <label className={clsx("form-label font-medium", className)} {...props}>
-      {children}
-      {required && <span className="form-required">*</span>}
-    </label>
-  );
-}
-
-const Input = React.forwardRef(({ className, ...props }, ref) => {
-  return (
-    <input className={clsx("form-input", className)} {...props} ref={ref} />
-  );
-});
-
-const Select = React.forwardRef(({ className, ...props }, ref) => {
-  return (
-    <select className={clsx("form-input", className)} {...props} ref={ref} />
-  );
-});
-
-function Field({ className, ...props }) {
-  return <div className={clsx("form-field", className)} {...props} />;
-}
-
-function FieldError({ error }) {
-  return (
-    <p className="form-error">{error && <span role="alert">{error}</span>}</p>
-  );
-}
 
 const today = new Date(new Date().toLocaleDateString());
 const dateMin = format(today, "yyyy-MM-dd");
@@ -117,9 +92,7 @@ function Submit() {
           </Label>
           <Select id="time" {...register("time")}>
             {timeslots == null || timeslots.length === 0 ? (
-              <option value="" disabled selected>
-                Select a date first
-              </option>
+              <option value="">Select a date first</option>
             ) : (
               timeslots.map((value) => <option key={value}>{value}</option>)
             )}
