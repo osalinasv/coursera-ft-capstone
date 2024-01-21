@@ -2,6 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { compareAsc, format, parse } from "date-fns";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { Button } from "../../../components/ui/Button";
 import {
@@ -11,7 +12,7 @@ import {
   Label,
   Select,
 } from "../../../components/ui/Form";
-import { fetchAPI } from "../../../integrations/mockApi";
+import { fetchAPI, submitAPI } from "../../../integrations/mockApi";
 import "./styles.css";
 
 const today = new Date(new Date().toLocaleDateString());
@@ -42,12 +43,13 @@ const schema = z.object({
   reason: z.string().optional(),
   name: z
     .string()
-    .refine((value) => value !== "", { message: "Name cannot be empty" }),
+    .refine((value) => value !== "", { message: "Please provide a name" }),
   email: z.string().email("Please enter a valid email"),
 });
 
 function Submit() {
   const [timeslots, setTimeslots] = useState(null);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -66,7 +68,11 @@ function Submit() {
     setTimeslots(slots);
   };
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    if (submitAPI(data)) {
+      navigate("success", { preventScrollReset: true, state: data });
+    }
+  };
 
   return (
     <form className="reserve-form" onSubmit={handleSubmit(onSubmit)}>
@@ -81,7 +87,9 @@ function Submit() {
             id="date"
             type="date"
             min={dateMin}
-            {...register("date", { onChange: onDateSelected })}
+            {...register("date", {
+              onChange: onDateSelected,
+            })}
           />
           <FieldError error={errors.date?.message} />
         </Field>
@@ -94,7 +102,12 @@ function Submit() {
             {timeslots == null || timeslots.length === 0 ? (
               <option value="">Select a date first</option>
             ) : (
-              timeslots.map((value) => <option key={value}>{value}</option>)
+              <>
+                <option value="">Select a time</option>
+                {timeslots.map((value) => (
+                  <option key={value}>{value}</option>
+                ))}
+              </>
             )}
           </Select>
           <FieldError error={errors.time?.message} />
@@ -109,7 +122,7 @@ function Submit() {
             type="number"
             min="1"
             max="10"
-            {...register("guests")}
+            {...register("guests", { valueAsNumber: true })}
           />
           <FieldError error={errors.guests?.message} />
         </Field>

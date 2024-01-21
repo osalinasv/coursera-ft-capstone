@@ -1,0 +1,6 @@
+.reserve-success {
+  display: grid;
+  padding: 1rem;
+  place-items: center;
+  place-content: center;
+}

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import heroImage from "../../assets/about-image-2.webp";
 import accentImage from "../../assets/submit-image.webp";
 import { Hero } from "../../components/shared/Hero";
@@ -23,7 +23,7 @@ function Reserve() {
           </p>
 
           <Button variant="accent" size="lg" className="hero-action" asChild>
-            <a href="#reserve-now">Reserve now</a>
+            <Link to="/booking#reserve-now">Reserve now</Link>
           </Button>
         </Hero.HeroContent>
 

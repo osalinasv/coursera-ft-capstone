@@ -3,12 +3,12 @@
   gap: 2rem;
   grid-auto-flow: dense;
   grid-auto-rows: min-content;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
 .reserve-form-section {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-auto-flow: dense;
   grid-auto-rows: min-content;
 }
