@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
 import heroImage from "../../assets/about-image-2.webp";
 import accentImage from "../../assets/submit-image.webp";
 import { Hero } from "../../components/shared/Hero";
+import { Loading } from "../../components/shared/Loading";
 import { Button } from "../../components/ui/Button";
 import "./styles.css";
 
@@ -48,7 +50,9 @@ function Reserve() {
             className="reserve-img"
           />
 
-          <Outlet />
+          <Suspense fallback={<Loading />}>
+            <Outlet />
+          </Suspense>
         </div>
       </section>
     </>
