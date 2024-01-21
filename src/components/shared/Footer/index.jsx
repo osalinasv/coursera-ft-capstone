@@ -33,7 +33,7 @@ export function Footer() {
                   <Link to="/menu">Menu</Link>
                 </li>
                 <li className="mb-2">
-                  <Link to="/reserve">Reservations</Link>
+                  <Link to="/booking">Reservations</Link>
                 </li>
                 <li className="mb-2">
                   <Link to="/order">Order Online</Link>

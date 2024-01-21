@@ -1,4 +1,5 @@
 .button {
+  border: none;
   display: inline-flex;
   place-items: center;
   justify-content: center;

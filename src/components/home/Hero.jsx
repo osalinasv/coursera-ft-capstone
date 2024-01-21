@@ -20,7 +20,7 @@ export function HomeHero() {
         </p>
 
         <Button variant="accent" size="lg" className="hero-action" asChild>
-          <Link to="/reserve">Reserve a Table</Link>
+          <Link to="/booking">Reserve a Table</Link>
         </Button>
       </Hero.HeroContent>
 

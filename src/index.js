@@ -9,7 +9,7 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Menu = React.lazy(() => import("./pages/Menu"));
 const Order = React.lazy(() => import("./pages/Order"));
 const Reserve = React.lazy(() => import("./pages/Reserve"));
-const ReserveForm = React.lazy(() => import("./pages/Reserve/Form"));
+const ReserveSubmit = React.lazy(() => import("./pages/Reserve/Submit"));
 const ReserveSuccess = React.lazy(() => import("./pages/Reserve/Success"));
 
 const router = createBrowserRouter([
@@ -26,12 +26,12 @@ const router = createBrowserRouter([
         element: <Order />,
       },
       {
-        path: "/reserve",
+        path: "/booking",
         element: <Reserve />,
         children: [
           {
             path: "",
-            element: <ReserveForm />,
+            element: <ReserveSubmit />,
           },
           {
             path: "success",

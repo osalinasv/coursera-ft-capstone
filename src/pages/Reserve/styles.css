@@ -1,0 +1,20 @@
+.reserve {
+  display: grid;
+  border: 1px solid var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+.reserve-img {
+  display: none;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .reserve-img {
+    display: block;
+    height: 100%;
+  }
+}

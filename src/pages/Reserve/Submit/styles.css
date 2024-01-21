@@ -1,0 +1,41 @@
+.reserve-form {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: min-content;
+  padding: 2rem 1rem;
+}
+
+.reserve-form-section {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: min-content;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.form-required {
+  color: red;
+}
+
+.form-input {
+  display: block;
+  border: 1px solid var(--surface);
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  appearance: none;
+}
+
+.form-error {
+  height: 1em;
+  color: #e26b6b;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
