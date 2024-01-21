@@ -6,7 +6,7 @@ import { Hero } from "../../components/shared/Hero";
 import { MenuItem } from "../../components/shared/MenuItem";
 import "./styles.css";
 
-export function MenuHero() {
+function MenuHero() {
   return (
     <Hero>
       <Hero.HeroImage
@@ -34,7 +34,7 @@ export function MenuHero() {
   );
 }
 
-export function MenuSection() {
+function MenuSection() {
   return (
     <section className="menu-section container mx-auto px-gutter py-16">
       <h2 className="font-xl font-extrabold text-uppercase mb-4">Specials</h2>
