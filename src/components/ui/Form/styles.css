@@ -18,6 +18,11 @@
   appearance: none;
 }
 
+.form-input:invalid,
+.form-input[aria-invalid="true"] {
+  border-color: #e26b6b;
+}
+
 .form-error {
   min-height: 1em;
   color: #e26b6b;

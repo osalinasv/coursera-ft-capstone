@@ -87,7 +87,9 @@ function Submit() {
             id="date"
             type="date"
             min={dateMin}
+            aria-invalid={!!errors.date}
             {...register("date", {
+              required: true,
               onChange: onDateSelected,
             })}
           />
@@ -98,7 +100,11 @@ function Submit() {
           <Label htmlFor="time" required>
             What time?
           </Label>
-          <Select id="time" {...register("time")}>
+          <Select
+            id="time"
+            aria-invalid={!!errors.time}
+            {...register("time", { required: true })}
+          >
             {timeslots == null || timeslots.length === 0 ? (
               <option value="">Select a date first</option>
             ) : (
@@ -122,14 +128,19 @@ function Submit() {
             type="number"
             min="1"
             max="10"
-            {...register("guests", { valueAsNumber: true })}
+            aria-invalid={!!errors.guests}
+            {...register("guests", { required: true, valueAsNumber: true })}
           />
           <FieldError error={errors.guests?.message} />
         </Field>
 
         <Field>
           <Label htmlFor="reason">Any special occasions?</Label>
-          <Select id="reason" {...register("reason")}>
+          <Select
+            id="reason"
+            aria-invalid={!!errors.reason}
+            {...register("reason")}
+          >
             <option value="">None</option>
             <option value="other">Other</option>
             <option value="birhday">Birhday</option>
@@ -146,7 +157,12 @@ function Submit() {
           <Label htmlFor="name" required>
             Name
           </Label>
-          <Input id="name" placeholder="Full Name" {...register("name")} />
+          <Input
+            id="name"
+            placeholder="Full Name"
+            aria-invalid={!!errors.name}
+            {...register("name", { required: true })}
+          />
           <FieldError error={errors.name?.message} />
         </Field>
 
@@ -158,7 +174,8 @@ function Submit() {
             id="email"
             type="email"
             placeholder="your@email.com"
-            {...register("email")}
+            aria-invalid={!!errors.email}
+            {...register("email", { required: true })}
           />
           <FieldError error={errors.email?.message} />
         </Field>
