@@ -5,7 +5,22 @@ import "./styles.css";
 
 export function Footer() {
   return (
-    <footer className="footer bg-primary text-inverse py-16">
+    <footer className="footer bg-primary text-inverse">
+      <div className="text-center mb-8">
+        <p className="mb-2">
+          Hey! <br />
+          This site was built by Omar Salinas
+        </p>
+        <a
+          href="https://github.com/osalinasv/coursera-ft-capstone"
+          target="_blank"
+          rel="noreferrer"
+          className="font-xl font-bold"
+        >
+          See the code on GitHub
+        </a>
+      </div>
+
       <div className="footer-container container mx-auto px-gutter">
         <div className="footer-logo-cont">
           <img
