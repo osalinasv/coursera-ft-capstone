@@ -1,9 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
-import React from "react";
+import { compareAsc, format, parse } from "date-fns";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "../../../components/ui/Button";
+import { fetchAPI } from "../../../integrations/mockApi";
 import "./styles.css";
 
 function Label({ className, children, required, ...props }) {
@@ -37,17 +39,41 @@ function FieldError({ error }) {
   );
 }
 
-const today = new Date(new Date().toDateString());
+const today = new Date(new Date().toLocaleDateString());
+const dateMin = format(today, "yyyy-MM-dd");
+
+function dateFromString(value) {
+  return value ? parse(value, "yyyy-MM-dd", new Date()) : null;
+}
+
 const schema = z.object({
-  date: z.date({ coerce: true }).min(today),
-  time: z.string().refine((value) => value !== ""),
-  guests: z.number({ coerce: true }).min(1).max(10),
+  date: z
+    .string()
+    .transform(dateFromString)
+    .refine((d) => !!d, { message: "Please enter a date at or after today" })
+    .refine(
+      (d) => {
+        return compareAsc(d, today) !== -1;
+      },
+      { message: "Can't be before today" }
+    ),
+  time: z
+    .string()
+    .refine((value) => value !== "", { message: "Please select a time slot" }),
+  guests: z.coerce
+    .number()
+    .min(1, "Must be between 1 and 10")
+    .max(10, "Must be between 1 and 10"),
   reason: z.string().optional(),
-  name: z.string().refine((value) => value !== ""),
-  email: z.string().email(),
+  name: z
+    .string()
+    .refine((value) => value !== "", { message: "Name cannot be empty" }),
+  email: z.string().email("Please enter a valid email"),
 });
 
 function Submit() {
+  const [timeslots, setTimeslots] = useState(null);
+
   const {
     register,
     handleSubmit,
@@ -58,6 +84,12 @@ function Submit() {
       guests: 1,
     },
   });
+
+  const onDateSelected = (e) => {
+    const value = e.target.valueAsDate;
+    const slots = fetchAPI(value);
+    setTimeslots(slots);
+  };
 
   const onSubmit = (data) => console.log(data);
 
@@ -73,8 +105,8 @@ function Submit() {
           <Input
             id="date"
             type="date"
-            min={today.toISOString().split("T")[0]}
-            {...register("date")}
+            min={dateMin}
+            {...register("date", { onChange: onDateSelected })}
           />
           <FieldError error={errors.date?.message} />
         </Field>
@@ -84,9 +116,13 @@ function Submit() {
             What time?
           </Label>
           <Select id="time" {...register("time")}>
-            <option value="" disabled selected>
-              Select a date first
-            </option>
+            {timeslots == null || timeslots.length === 0 ? (
+              <option value="" disabled selected>
+                Select a date first
+              </option>
+            ) : (
+              timeslots.map((value) => <option key={value}>{value}</option>)
+            )}
           </Select>
           <FieldError error={errors.time?.message} />
         </Field>

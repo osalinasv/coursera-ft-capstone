@@ -1,9 +1,9 @@
 .reserve-form {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-auto-flow: dense;
   grid-auto-rows: min-content;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .reserve-form-section {
@@ -34,8 +34,9 @@
 }
 
 .form-error {
-  height: 1em;
+  min-height: 1em;
   color: #e26b6b;
   margin-top: 0.25rem;
   font-size: 0.9rem;
+  line-height: 1;
 }
